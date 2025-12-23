@@ -3,13 +3,12 @@
     "displayName": "shakira-warm-spectrum",
     "publisher": "ShakiraChristian",
     "description": "Warm-spectrum light and dark themes tailored for Julia, with vibrant syntax highlighting.",
+    "icon": "icon.png",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.107.0"
     },
-    "categories": [
-        "Themes"
-    ],
+    "categories": [ "Themes" ],
     "contributes": {
         "themes": [ {
                 "label": "Shakira Warm Spectrum Dark",
@@ -25,5 +24,9 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/abcdvvvv/shakira-warm-spectrum.git"
+    },
+    "homepage": "https://github.com/abcdvvvv/shakira-warm-spectrum#readme",
+    "bugs": {
+        "url": "https://github.com/abcdvvvv/shakira-warm-spectrum/issues"
     }
 }
