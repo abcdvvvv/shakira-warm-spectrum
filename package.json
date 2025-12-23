@@ -1,6 +1,6 @@
 {
     "name": "shakira-warm-spectrum",
-    "displayName": "shakira-warm-spectrum",
+    "displayName": "Shakira Warm Spectrum",
     "publisher": "ShakiraChristian",
     "description": "Warm-spectrum light and dark themes tailored for Julia, with vibrant syntax highlighting.",
     "icon": "icon.png",
@@ -9,6 +9,7 @@
         "vscode": "^1.107.0"
     },
     "categories": [ "Themes" ],
+    "keywords": [ "Julia", "theme", "color theme", "syntax highlighting", "dark", "light" ],
     "contributes": {
         "themes": [ {
                 "label": "Shakira Warm Spectrum Dark",
