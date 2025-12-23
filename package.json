@@ -15,9 +15,9 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/Shakira Warm Spectrum Dark-color-theme.json"
             }, {
-                "label": "Shakira Warm Spectrum Light",
+                "label": "Shakira Julia Light",
                 "uiTheme": "vs",
-                "path": "./themes/Shakira Warm Spectrum Light-color-theme.json"
+                "path": "./themes/Shakira Julia Light-color-theme.json"
             }
         ]
     },

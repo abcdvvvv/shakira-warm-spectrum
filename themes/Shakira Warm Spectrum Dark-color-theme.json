@@ -1,6 +1,20 @@
 {
     "name": "Shakira Warm Spectrum Dark",
     "colors": {
+        "titleBar.activeBackground": "#181818",
+        "titleBar.activeForeground": "#CCCCCC",
+        "titleBar.inactiveBackground": "#1f1f1f",
+        "titleBar.inactiveForeground": "#bbbbbb",
+        "titleBar.border": "#2b2b2b",
+
+        "tab.activeBackground": "#1f1f1f",
+        "tab.inactiveBackground": "#181818",
+        "editorGroupHeader.tabsBackground": "#181818",
+        "editorGroupHeader.noTabsBackground": "#181818",
+
+        "panel.background": "#181818",
+        "panel.border": "#2b2b2b",
+
         "editor.background": "#212121",
         "editor.foreground": "#CCCCCC",
         "terminal.background": "#131313",
@@ -9,11 +23,14 @@
         "activityBarBadge.background": "#007acc",
         "sideBar.background": "#212121",
         "sideBarTitle.foreground": "#bbbbbb",
+        "sideBarSectionHeader.background": "#181818",
+        // "sideBarSectionHeader.foreground": "#333333",
+        // "sideBarSectionHeader.border": "#2b2b2b",
+
         "statusBar.background": "#212121",
         "statusBar.noFolderBackground": "#212121",
         "statusBar.debuggingBackground": "#6a3338",
-        // "editorGroupHeader.tabsBackground": "#2d2d2d",
-        // "editorGroupHeader.noTabsBackground": "#212121",
+
         "editor.selectionHighlightBackground": "#add6ff4b",
         "editor.selectionBackground": "#414141",
         "editorBracketHighlight.foreground1": "#e0c841",
