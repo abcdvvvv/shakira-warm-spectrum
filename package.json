@@ -4,7 +4,7 @@
     "publisher": "ShakiraChristian",
     "description": "Warm-spectrum light and dark themes tailored for Julia, with vibrant syntax highlighting.",
     "icon": "icon.png",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.107.0"
     },
