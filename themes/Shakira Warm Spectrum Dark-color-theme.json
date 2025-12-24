@@ -24,7 +24,7 @@
         "sideBarSectionHeader.foreground": "#CCCCCC",
         "statusBar.background": "#212121",
         "statusBar.noFolderBackground": "#212121",
-        "statusBar.debuggingBackground": "#6a3338",
+        "statusBar.debuggingBackground": "#7e5312",
         "editor.selectionHighlightBackground": "#add6ff4b",
         "editor.selectionBackground": "#414141",
         "editorBracketHighlight.foreground1": "#e0c841",
@@ -566,6 +566,12 @@
             "settings": { "foreground": "#e49f34" }
         },
         {
+            "name": "Julia / R - assignment operators",
+            "scope": [ "keyword.operator.assignment.r",
+                "keyword.operator.arrow.julia" ],
+            "settings": { "foreground": "#e49f34" }
+        },
+        {
             "name": "C++ - using",
             "scope": [ "source.cpp keyword.other.using",
                 "source.c++ keyword.other.using" ],
@@ -640,6 +646,12 @@
                 "source.cpp meta.function.definition.cpp entity.name.function.definition.cpp",
                 "source.c++ meta.function.definition.cpp entity.name.function.definition.cpp" ],
             "settings": { "foreground": "#e49f34" }
+        },
+        {
+            "name": "R - function-call assignment (=)",
+            "scope": [ "meta.function-call.r keyword.operator.assignment.r",
+                "meta.function.parameters.r keyword.operator.assignment.r" ],
+            "settings": { "foreground": "#CCCCCC" }
         },
         {
             "name": "R - Range operator (:)",

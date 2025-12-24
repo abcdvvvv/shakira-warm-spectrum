@@ -17,7 +17,7 @@
         "editorBracketHighlight.foreground1": "#4063D8",
         "editorBracketHighlight.foreground2": "#9558B2",
         "editorBracketHighlight.foreground3": "#CB3C33",
-        "editorBracketHighlight.foreground4": "#D2691E",
+        "editorBracketHighlight.foreground4": "#e77b00",
         "editorBracketHighlight.foreground5": "#389826"
     },
     "semanticHighlighting": true,
@@ -26,7 +26,7 @@
         "variable": "#333333",
         "keyword": "#CB3C33",
         "struct": "#CB3C33",
-        "number": "#D2691E",
+        "number": "#e77b00",
         "operator": "#333334",
         "function": "#4063D8",
         "method": "#4063D8",
@@ -127,7 +127,7 @@
                 "support.constant",
                 "variable.parameter",
                 "keyword.other.unit" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Symbols, Keys",
@@ -178,7 +178,7 @@
         {
             "name": "Language methods",
             "scope": [ "variable.language" ],
-            "settings": { "fontStyle": "", "foreground": "#D2691E" }
+            "settings": { "fontStyle": "", "foreground": "#e77b00" }
         },
         {
             "name": "entity.name.method.js",
@@ -225,7 +225,7 @@
         {
             "name": "Changed",
             "scope": [ "markup.changed" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Regular Expressions",
@@ -268,7 +268,7 @@
         {
             "name": "JSON Key - Level 2",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "JSON Key - Level 3",
@@ -288,7 +288,7 @@
         {
             "name": "JSON Key - Level 6",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "JSON Key - Level 7",
@@ -347,7 +347,7 @@
         {
             "name": "Markup - Underline",
             "scope": [ "markup.underline" ],
-            "settings": { "fontStyle": "underline", "foreground": "#D2691E" }
+            "settings": { "fontStyle": "underline", "foreground": "#e77b00" }
         },
         {
             "name": "Markdown - Blockquote",
@@ -372,7 +372,7 @@
         {
             "name": "Markdown - Link Anchor",
             "scope": [ "constant.other.reference.link.markdown" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Markup - Raw Block",
@@ -439,7 +439,7 @@
         {
             "name": "Ref - Numbers",
             "scope": [ "constant.numeric" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Ref - support.type",
@@ -553,6 +553,12 @@
             "settings": { "foreground": "#9558B2" }
         },
         {
+            "name": "Julia / R - assignment operators",
+            "scope": [ "keyword.operator.assignment.r",
+                "keyword.operator.arrow.julia" ],
+            "settings": { "foreground": "#f17821" }
+        },
+        {
             "name": "C++ - using",
             "scope": [ "source.cpp keyword.other.using",
                 "source.c++ keyword.other.using" ],
@@ -612,7 +618,7 @@
                 "source.c++ keyword.other.unit",
                 "source.cpp keyword.operator.minus.exponent",
                 "source.c++ keyword.operator.minus.exponent" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "C++ - function calls",
@@ -626,7 +632,13 @@
                 "source.c++ entity.name.function.definition.cpp",
                 "source.cpp meta.function.definition.cpp entity.name.function.definition.cpp",
                 "source.c++ meta.function.definition.cpp entity.name.function.definition.cpp" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
+        },
+        {
+            "name": "R - function-call assignment (=)",
+            "scope": [ "meta.function-call.r keyword.operator.assignment.r",
+                "meta.function.parameters.r keyword.operator.assignment.r" ],
+            "settings": { "foreground": "#333334" }
         },
         {
             "name": "R - Range operator (:)",
@@ -706,7 +718,7 @@
         {
             "name": "R - Comparison operators",
             "scope": [ "keyword.operator.comparison.r" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Python - class/def/async keyword",
@@ -756,7 +768,7 @@
         {
             "name": "Python - f-string format spec (:,.3f etc.)",
             "scope": [ "meta.fstring.python storage.type.format.python" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Python - exceptions",
@@ -766,12 +778,12 @@
         {
             "name": "Python - imaginary numbers",
             "scope": [ "storage.type.imaginary.number.python" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Python - numeric prefixes (0x/0o/0b)",
             "scope": [ "storage.type.number.python" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#e77b00" }
         }
     ]
 }

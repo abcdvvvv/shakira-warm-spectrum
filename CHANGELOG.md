@@ -4,6 +4,14 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.4] - 2025-12-24
+
+### Changed
+
+- Light theme: refreshed the number/orange accent from `#D2691E` to `#e77b00`.
+- Added `Julia / R - assignment operators` rule (Julia `->`/`=>` and R `<-`), keeping dark/light token sets aligned.
+- R: keep function-call argument `=` neutral via `R - function-call assignment (=)` so `<-` can be highlighted independently.
+
 ## [0.1.3] - 2025-12-24
 
 ### Changed
