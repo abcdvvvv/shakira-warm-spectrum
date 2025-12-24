@@ -4,6 +4,12 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.2] - 2025-12-24
+
+### Changed
+
+- Lowered the minimum VS Code version requirement to `^1.60.0`.
+
 ## [0.1.1] - 2025-12-24
 
 ### Fixed
