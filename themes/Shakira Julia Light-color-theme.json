@@ -258,47 +258,47 @@
         {
             "name": "JSON Key - Level 0",
             "scope": [ "source.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#CB3C33" }
+            "settings": { "foreground": "#333333" }
         },
         {
             "name": "JSON Key - Level 1",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#4063D8" }
         },
         {
             "name": "JSON Key - Level 2",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#4063D8" }
+            "settings": { "foreground": "#D2691E" }
         },
         {
             "name": "JSON Key - Level 3",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#389826" }
+            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "JSON Key - Level 4",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#CB3C33" }
+            "settings": { "foreground": "#389826" }
         },
         {
             "name": "JSON Key - Level 5",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#D2691E" }
+            "settings": { "foreground": "#4063D8" }
         },
         {
             "name": "JSON Key - Level 6",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#4063D8" }
+            "settings": { "foreground": "#D2691E" }
         },
         {
             "name": "JSON Key - Level 7",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#389826" }
+            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "JSON Key - Level 8",
             "scope": [ "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json" ],
-            "settings": { "foreground": "#CB3C33" }
+            "settings": { "foreground": "#389826" }
         },
         {
             "name": "Markdown - Plain",
@@ -490,8 +490,15 @@
         },
         {
             "name": "Julia - docstring",
-            "scope": [ "string.docstring.julia" ],
+            "scope": [ "string.docstring.julia",
+                "string.docstring.julia punctuation.definition.string.begin.julia",
+                "string.docstring.julia punctuation.definition.string.end.julia" ],
             "settings": { "foreground": "#848BBD" }
+        },
+        {
+            "name": "Julia - docstring embedded code block",
+            "scope": [ "docstring.julia.codeblock meta.embedded.block.julia" ],
+            "settings": { "foreground": "#333333" }
         },
         {
             "name": "Julia - comments",

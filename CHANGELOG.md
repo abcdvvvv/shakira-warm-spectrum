@@ -4,6 +4,14 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.3] - 2025-12-24
+
+### Changed
+
+- Improved Julia docstring styling (triple quotes and embedded code blocks).
+- Updated JSON key nesting colors for better readability.
+- Refined C++ token colors and kept dark/light rules aligned.
+
 ## [0.1.2] - 2025-12-24
 
 ### Changed
