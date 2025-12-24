@@ -1,4 +1,3 @@
 node_modules
 *.vsix
 .env
-/sample_code
