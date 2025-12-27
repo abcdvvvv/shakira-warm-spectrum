@@ -4,6 +4,15 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.5] - 2025-12-27
+
+### Changed
+
+- Dark theme: added `sideBar.border` for clearer sidebar separation.
+- Dark theme: adjusted JSON key nesting colors (alternating neutral + cyan) for readability.
+- Light theme: adjusted JSON key nesting colors (alternating neutral + blue) for readability.
+- Repo: mark `sample_code/` as vendored for GitHub linguist.
+
 ## [0.1.4] - 2025-12-24
 
 ### Changed

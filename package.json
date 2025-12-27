@@ -4,7 +4,7 @@
     "publisher": "ShakiraChristian",
     "description": "Warm-spectrum light and dark themes with vibrant syntax highlighting for Julia, Python, and R.",
     "icon": "icon.png",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "engines": { "vscode": "^1.60.0" },
     "categories": [ "Themes" ],
     "keywords": [ "Julia", "Python", "R", "theme", "color theme", "syntax highlighting", "dark", "light" ],
