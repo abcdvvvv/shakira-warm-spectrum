@@ -798,6 +798,39 @@
             "name": "Python - numeric prefixes (0x/0o/0b)",
             "scope": [ "storage.type.number.python" ],
             "settings": { "foreground": "#e49f34" }
+        },
+        {
+            "name": "MATLAB - function-call parens",
+            "scope": [ "meta.function-call.parens.matlab entity.name.function.matlab" ],
+            "settings": { "foreground": "#e0c841" }
+        },
+        {
+            "name": "MATLAB - function declaration",
+            "scope": [ "meta.function.declaration.matlab entity.name.function.matlab" ],
+            "settings": { "foreground": "#e49f34" }
+        },
+        {
+            "name": "MATLAB - input/output parameters",
+            "scope": [ "variable.parameter.output.matlab",
+                "variable.parameter.input.matlab",
+                "punctuation.accessor.dot.matlab" ],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "MATLAB - if declaration",
+            "scope": [ "meta.if.declaration.matlab" ],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "MATLAB - operator relational",
+            "scope": [ "keyword.operator.relational.matlab" ],
+            "settings": { "foreground": "#e49f34" }
+        },
+        {
+            "name": "MATLAB - logical operators",
+            "scope": [ "meta.while.declaration.matlab keyword.operator.logical.matlab",
+                "meta.if.declaration.matlab keyword.operator.logical.matlab" ],
+            "settings": { "foreground": "#e06c75" }
         }
     ]
 }

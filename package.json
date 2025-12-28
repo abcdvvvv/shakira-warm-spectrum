@@ -2,12 +2,12 @@
     "name": "shakira-warm-spectrum",
     "displayName": "Shakira Warm Spectrum",
     "publisher": "ShakiraChristian",
-    "description": "Warm-spectrum light and dark themes with vibrant syntax highlighting for Julia, Python, and R.",
+    "description": "Warm-spectrum light and dark themes with vibrant syntax highlighting for Julia, Python, R, and MATLAB.",
     "icon": "icon.png",
-    "version": "0.1.5",
+    "version": "0.2.0",
     "engines": { "vscode": "^1.60.0" },
     "categories": [ "Themes" ],
-    "keywords": [ "Julia", "Python", "R", "theme", "color theme", "syntax highlighting", "dark", "light" ],
+    "keywords": [ "Julia", "Python", "R", "MATLAB", "theme", "color theme", "syntax highlighting", "dark", "light" ],
     "contributes": {
         "themes": [ {
                 "label": "Shakira Warm Spectrum Dark",

@@ -4,6 +4,12 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.0] - 2025-12-28
+
+### Added
+
+- MATLAB syntax highlighting rules for both themes (function calls/declarations, parameters, relational/logical operators, and `if` blocks).
+
 ## [0.1.5] - 2025-12-27
 
 ### Changed

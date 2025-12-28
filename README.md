@@ -1,6 +1,6 @@
 # Shakira Warm Spectrum
 
-Warm-spectrum color themes (Dark + Light) with vibrant syntax highlighting for Julia, Python, and R.
+Warm-spectrum color themes (Dark + Light) with vibrant syntax highlighting for Julia, Python, R, and MATLAB.
 
 ## Screenshots
 
@@ -17,8 +17,6 @@ Two variants:
 - Dark (Warm Spectrum): warm palette tuned for readability.
 
 - Light (Julia Logo): uses the four Julia logo colors as the primary accents.
-
-> Note: Language-specific rules are included for Julia/Python/R; other languages fall back to generic scopes and VS Code defaults.
 
 ## Install
 
