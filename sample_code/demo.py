@@ -36,7 +36,67 @@ def train_logreg_sgd(X, y, lr=0.2, l2=1e-2, steps=800, batch=128, seed=0):
 
     return w, b
 
-# if __name__ == "__main__":
-#     X, y = make_data()
-#     w, b = train_logreg_sgd(X, y)
-#     print("final |w|=", float(np.linalg.norm(w)), "b=", b)
+if __name__ == "__main__":
+    X, y = make_data()
+    w, b = train_logreg_sgd(X, y)
+    print("final |w|=", float(np.linalg.norm(w)), "b=", b)
+
+# theme-test.py
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from typing import Any, Generic, Iterable, Optional, TypeVar, Protocol
+from enum import Enum
+import re
+
+T = TypeVar("T")
+
+class Mode(Enum):
+    DEV = "dev"
+    PROD = "prod"
+
+class HasId(Protocol):
+    id: str
+
+@dataclass(slots=True, frozen=False)
+class Box(Generic[T]):
+    mode: Mode = Mode.DEV
+    _cache: dict[str, T] = field(default_factory=dict)
+
+    def get(self, key: str) -> Optional[T]:
+        return self._cache.get(key)
+
+    def set(self, key: str, value: T) -> "Box[T]":
+        self._cache[key] = value
+        return self
+
+    def update_many(self, pairs: Iterable[tuple[str, T]]) -> None:
+        for k, v in pairs:
+            self._cache[k] = v
+
+    def find_keys(self, pattern: str) -> list[str]:
+        rx = re.compile(pattern)
+        return [k for k in self._cache if rx.search(k)]
+
+    def __len__(self) -> int:
+        return len(self._cache)
+
+    def __repr__(self) -> str:
+        return f"Box(mode={self.mode.value!r}, size={len(self)})"
+
+
+@dataclass(slots=True)
+class User:
+    id: str
+    name: str
+    meta: dict[str, Any] = field(default_factory=dict)
+
+
+if __name__ == "__main__":
+    box: Box[User] = Box(mode=Mode.DEV)
+    box.set("u1", User(id="u1", name="Ada", meta={"tags": ["py", "theme"]}))
+    box.update_many([("u2", User(id="u2", name="Linus"))])
+
+    print(box)
+    print(box.get("u1"))
+    print(box.find_keys(r"^u\d$"))

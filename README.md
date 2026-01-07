@@ -1,6 +1,15 @@
 # Shakira Warm Spectrum
 
-Warm-spectrum color themes (Dark + Light) with vibrant syntax highlighting for Julia, Python, R, and MATLAB.
+Warm-spectrum color themes (Dark + Light) with vibrant syntax highlighting.
+
+## Supported Languages
+
+- JavaScript (including JSX)
+- Julia
+- MATLAB
+- Python
+- R
+- TypeScript (including TSX)
 
 ## Screenshots
 

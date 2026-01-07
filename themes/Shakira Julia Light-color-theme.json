@@ -24,16 +24,17 @@
     "semanticTokenColors": {
         "string": "#476ae0",
         "variable": "#333333",
+        "parameter": "#333333",
         "keyword": "#CB3C33",
         "struct": "#CB3C33",
         "number": "#e77b00",
         "operator": "#333334",
-        "function": "#4063D8",
+        "function": "#e77b00",
         "method": "#4063D8",
         "macro": "#4063D8",
         "type": "#389826",
-        "class": "#389826",
-        "property": "#a9b7c6"
+        "class": "#333333",
+        "property": "#4063D8"
     },
     "tokenColors": [
         {
@@ -63,7 +64,6 @@
             "name": "Keyword, Storage",
             "scope": [ "keyword",
                 "keyword.control",
-                "storage.type",
                 "storage.modifier" ],
             "settings": { "foreground": "#CB3C33" }
         },
@@ -100,7 +100,7 @@
             "scope": [ "entity.name.tag",
                 "meta.tag.sgml",
                 "markup.deleted.git_gutter" ],
-            "settings": { "foreground": "#CB3C33" }
+            "settings": { "foreground": "#4063D8" }
         },
         {
             "name": "Function, Special Method",
@@ -125,7 +125,6 @@
             "name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
             "scope": [ "constant.numeric",
                 "support.constant",
-                "variable.parameter",
                 "keyword.other.unit" ],
             "settings": { "foreground": "#e77b00" }
         },
@@ -194,7 +193,7 @@
         {
             "name": "Attributes",
             "scope": [ "entity.other.attribute-name" ],
-            "settings": { "foreground": "#a9b7c6" }
+            "settings": { "foreground": "#4063D8" }
         },
         {
             "name": "HTML Attributes",
@@ -424,8 +423,7 @@
         },
         {
             "name": "Ref - Functions",
-            "scope": [ "entity.name.function",
-                "meta.function-call",
+            "scope": [ "meta.function-call",
                 "support.function",
                 "variable.function" ],
             "settings": { "foreground": "#4063D8" }
@@ -481,7 +479,7 @@
         {
             "name": "Ref - Classes",
             "scope": [ "support.class" ],
-            "settings": { "foreground": "#6192cc" }
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Ref - Variables",
@@ -511,6 +509,7 @@
             "scope": [ "keyword",
                 "keyword.operator.relation.in.julia",
                 "keyword.operator.boolean.julia",
+                "keyword.operator.bitwise.julia",
                 "keyword.operator.isa.julia",
                 "storage.type.function.tsx" ],
             "settings": { "foreground": "#CB3C33" }
@@ -551,6 +550,11 @@
                 "keyword.operator.relation.julia",
                 "keyword.operator.ternary.julia" ],
             "settings": { "foreground": "#9558B2" }
+        },
+        {
+            "name": "Julia - type relation operators",
+            "scope": [ "keyword.operator.relation.types.julia" ],
+            "settings": { "foreground": "#666666" }
         },
         {
             "name": "Julia / R - assignment operators",
@@ -733,6 +737,11 @@
             "settings": { "foreground": "#CB3C33" }
         },
         {
+            "name": "Python - comparison operators",
+            "scope": [ "keyword.operator.comparison.python" ],
+            "settings": { "foreground": "#e77b00" }
+        },
+        {
             "name": "Python - decorator",
             "scope": [ "entity.name.function.decorator.python" ],
             "settings": { "foreground": "#4063D8" }
@@ -745,9 +754,21 @@
             "settings": { "foreground": "#333333" }
         },
         {
+            "name": "Python - self parameters",
+            "scope": [ "meta.function.parameters.python variable.parameter.function.language.special.self.python",
+                "variable.language.special.self.python" ],
+            "settings": { "foreground": "#9558B2" }
+        },
+        {
             "name": "Python - class name",
             "scope": [ "entity.name.type.class.python" ],
             "settings": { "foreground": "#333333" }
+        },
+        {
+            "name": "Python - function names",
+            "scope": [ "support.function.magic.python",
+                "meta.function.python support.type.python" ],
+            "settings": { "foreground": "#9558B2" }
         },
         {
             "name": "Python - types in calls (float(x))",
@@ -817,6 +838,34 @@
             "scope": [ "meta.while.declaration.matlab keyword.operator.logical.matlab",
                 "meta.if.declaration.matlab keyword.operator.logical.matlab" ],
             "settings": { "foreground": "#CB3C33" }
+        },
+        {
+            "name": "JavaScript/TypeScript - arrow functions",
+            "scope": [ "meta.arrow.js storage.type.function.arrow.js",
+                "meta.arrow.js.jsx storage.type.function.arrow.js.jsx",
+                "meta.arrow.ts storage.type.function.arrow.ts",
+                "meta.arrow.tsx storage.type.function.arrow.tsx" ],
+            "settings": { "foreground": "#e77b00" }
+        },
+        {
+            "name": "JavaScript/TypeScript - keywords",
+            "scope": [ "source.js storage.type",
+                "meta.var.expr.js.jsx storage.type.js.jsx",
+                "source.ts storage.type",
+                "meta.var.expr.tsx storage.type.tsx" ],
+            "settings": { "foreground": "#CB3C33" }
+        },
+        {
+            "name": "JavaScript/TypeScript - modifier",
+            "scope": [ "source.js storage.modifier",
+                "source.ts storage.modifier" ],
+            "settings": { "foreground": "#e77b00" }
+        },
+        {
+            "name": "JavaScript/TypeScript - numeric",
+            "scope": [ "source.js storage.type.numeric",
+                "source.ts storage.type.numeric" ],
+            "settings": { "foreground": "#e77b00" }
         }
     ]
 }

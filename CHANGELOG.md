@@ -4,6 +4,18 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.0] - 2026-01-07
+
+### Added
+
+- Julia: highlight `keyword.operator.relation.types.julia` and `keyword.operator.bitwise.julia`.
+- Python: added comparison operator highlighting and `self` parameter highlighting.
+- Added JavaScript/TypeScript/TSX/JSX language support.
+
+### Changed
+
+- Updated semantic token palette (including `parameter`) for better consistency across languages.
+
 ## [0.2.0] - 2025-12-28
 
 ### Added
