@@ -37,12 +37,6 @@
     },
     "tokenColors": [
         {
-            "name": "Comment",
-            "scope": [ "comment",
-                "punctuation.definition.comment" ],
-            "settings": { "fontStyle": "italic", "foreground": "#546E7A" }
-        },
-        {
             "name": "Variables",
             "scope": [ "variable",
                 "string constant.other.placeholder" ],
@@ -58,13 +52,6 @@
             "scope": [ "invalid",
                 "invalid.illegal" ],
             "settings": { "foreground": "#FF5370" }
-        },
-        {
-            "name": "Keyword, Storage",
-            "scope": [ "keyword",
-                "keyword.control",
-                "storage.modifier" ],
-            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "Operator, Misc",
@@ -138,21 +125,14 @@
             "scope": [ "entity.name.class",
                 "entity.name.type",
                 "entity.name.struct",
-                "entity.name.enum",
                 "entity.name.interface",
                 "entity.other.inherited-class",
-                "support.type",
                 "support.class",
                 "support.other.namespace.use.php",
                 "meta.use.php",
                 "support.other.namespace.php",
                 "markup.changed.git_gutter",
                 "support.type.sys-types" ],
-            "settings": { "foreground": "#389826" }
-        },
-        {
-            "name": "Entity Types",
-            "scope": [ "support.type" ],
             "settings": { "foreground": "#389826" }
         },
         {
@@ -171,11 +151,6 @@
                 "variable.import.parameter.js",
                 "variable.other.class.js" ],
             "settings": { "foreground": "#389826" }
-        },
-        {
-            "name": "Language methods",
-            "scope": [ "variable.language" ],
-            "settings": { "fontStyle": "", "foreground": "#e77b00" }
         },
         {
             "name": "entity.name.method.js",
@@ -205,7 +180,7 @@
             "settings": { "foreground": "#389826" }
         },
         {
-            "name": "CSS ID's",
+            "name": "CSS ID\u0027s",
             "scope": [ "source.sass keyword.control" ],
             "settings": { "foreground": "#CB3C33" }
         },
@@ -377,26 +352,16 @@
             "settings": { "foreground": "#476ae0" }
         },
         {
-            "name": "Markdown - Raw Block Fenced",
-            "scope": [ "markup.raw.block.fenced.markdown" ],
-            "settings": { "foreground": "#00000050" }
-        },
-        {
             "name": "Markdown - Fenced Bode Block",
-            "scope": [ "punctuation.definition.fenced.markdown" ],
+            "scope": [ "markup.raw.block.fenced.markdown",
+                "punctuation.definition.fenced.markdown" ],
             "settings": { "foreground": "#00000050" }
         },
         {
             "name": "Markdown - Fenced Bode Block Variable",
-            "scope": [ "markup.raw.block.fenced.markdown",
-                "variable.language.fenced.markdown",
+            "scope": [ "variable.language.fenced.markdown",
                 "punctuation.section.class.end" ],
             "settings": { "foreground": "#333333" }
-        },
-        {
-            "name": "Markdown - Fenced Language",
-            "scope": [ "variable.language.fenced.markdown" ],
-            "settings": { "foreground": "#a9b7c6" }
         },
         {
             "name": "Markdown - Separator",
@@ -409,10 +374,10 @@
             "settings": { "foreground": "#333333" }
         },
         {
-            "name": "Ref - Comments",
+            "name": "Comment",
             "scope": [ "comment",
                 "punctuation.definition.comment" ],
-            "settings": { "fontStyle": "", "foreground": "#848BBD" }
+            "settings": { "fontStyle": "", "foreground": "#546E7A" }
         },
         {
             "name": "Ref - Strings",
@@ -420,46 +385,9 @@
             "settings": { "foreground": "#476ae0" }
         },
         {
-            "name": "Ref - Functions",
-            "scope": [ "meta.function-call",
-                "variable.function" ],
-            "settings": { "foreground": "#4063D8" }
-        },
-        {
-            "name": "Ref - Keywords",
-            "scope": [ "keyword",
-                "keyword.other" ],
-            "settings": { "foreground": "#CB3C33" }
-        },
-        {
             "name": "Ref - Numbers",
-            "scope": [ "constant.numeric" ],
+            "scope": [ "constant.numeric.julia" ],
             "settings": { "foreground": "#e77b00" }
-        },
-        {
-            "name": "Ref - support.type",
-            "scope": [ "support.type" ],
-            "settings": { "foreground": "#389826" }
-        },
-        {
-            "name": "Ref - constant.language",
-            "scope": [ "constant.language" ],
-            "settings": { "foreground": "#389826" }
-        },
-        {
-            "name": "Ref - Operators",
-            "scope": [ "keyword.operator" ],
-            "settings": { "foreground": "#333334" }
-        },
-        {
-            "name": "Ref - Attributes",
-            "scope": [ "entity.other.attribute" ],
-            "settings": { "foreground": "#a9b7c6" }
-        },
-        {
-            "name": "Ref - Storage modifier",
-            "scope": [ "storage.modifier" ],
-            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "Ref - Namespaces",
@@ -474,14 +402,87 @@
             "settings": { "foreground": "#333333" }
         },
         {
-            "name": "Ref - Classes",
-            "scope": [ "support.class" ],
+            "name": "Ref - function names",
+            "scope": [ "meta.function support.function.magic",
+                "meta.function entity.name.function" ],
             "settings": { "foreground": "#e77b00" }
         },
         {
-            "name": "Ref - Variables",
-            "scope": [ "support.variable" ],
+            "name": "Ref - function-call arguments",
+            "scope": [ "meta.function-call.arguments" ],
+            "settings": { "foreground": "#333333" }
+        },
+        {
+            "name": "Ref - function-call",
+            "scope": [ "source.julia support.function",
+                "meta.function-call support.function",
+                "meta.function-call meta.function-call.generic",
+                "meta.function-call entity.name.function constant.numeric",
+                "meta.function meta.function-call entity.name.function" ],
             "settings": { "foreground": "#4063D8" }
+        },
+        {
+            "name": "Ref - operator.assignment",
+            "scope": [ "keyword.operator.assignment",
+                "keyword.operator.update",
+                "keyword.operator.arithmetic",
+                "keyword.operator.dots",
+                "meta.function.parameters keyword.operator" ],
+            "settings": { "foreground": "#333333" }
+        },
+        {
+            "name": "Range operator",
+            "scope": [ "keyword.operator.range",
+                "meta.for keyword.operator.vector.colon.matlab" ],
+            "settings": { "foreground": "#e77b00" }
+        },
+        {
+            "name": "Ref - separator.annotation.result",
+            "scope": [ "punctuation.separator.annotation.result" ],
+            "settings": { "foreground": "#e77b00" }
+        },
+        {
+            "name": "Ref - type annotation",
+            "scope": [ "keyword.operator.relation.types.julia",
+                "punctuation.separator.annotation",
+                "keyword.operator.type.annotation",
+                "source.cpp punctuation.separator.scope-resolution" ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Ref - enum type",
+            "scope": [ "entity.name.type.enum" ],
+            "settings": { "foreground": "#333333" }
+        },
+        {
+            "name": "Type",
+            "scope": [ "support.type.julia",
+                "meta.function.parameters support.type",
+                "source.python support.type",
+                "source.cpp storage.type storage.type.built-in" ],
+            "settings": { "foreground": "#389826" }
+        },
+        {
+            "name": "Class",
+            "scope": [ "meta.class storage.type.class",
+                "storage.type.function.python",
+                "storage.type.function.async.python" ],
+            "settings": { "foreground": "#CB3C33" }
+        },
+        {
+            "name": "Class/Struct name",
+            "scope": [ "entity.name.type.class",
+                "meta.block.struct entity.name.type.struct" ],
+            "settings": { "foreground": "#333333" }
+        },
+        {
+            "name": "Modifier",
+            "scope": [ "source.matlab storage.modifier",
+                "source.js storage.modifier",
+                "source.ts storage.modifier",
+                "source.cpp storage.modifier",
+                "source.cpp storage.type.modifier" ],
+            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "Julia - docstring",
@@ -497,17 +498,20 @@
         },
         {
             "name": "Julia - comments",
-            "scope": [ "comment.line.number-sign.julia",
-                "punctuation.definition.comment" ],
+            "scope": [ "comment.line.number-sign.julia" ],
             "settings": { "fontStyle": "", "foreground": "#848BBD" }
         },
         {
             "name": "Julia - keywords (and TSX function storage)",
-            "scope": [ "keyword",
+            "scope": [ "keyword.control",
+                "keyword.other.julia",
                 "keyword.operator.relation.in.julia",
                 "keyword.operator.boolean.julia",
                 "keyword.operator.bitwise.julia",
                 "keyword.operator.isa.julia",
+                "keyword.storage.modifier.julia",
+                "keyword.other.concept.cpp",
+                "storage.modifier.specifier.const.cpp",
                 "storage.type.function.tsx" ],
             "settings": { "foreground": "#CB3C33" }
         },
@@ -518,8 +522,7 @@
         },
         {
             "name": "Julia - macros / apply",
-            "scope": [ "support.function.macro.julia",
-                "keyword.operator.applies.julia",
+            "scope": [ "keyword.operator.applies.julia",
                 "entity.name.function.member" ],
             "settings": { "foreground": "#4063D8" }
         },
@@ -548,11 +551,6 @@
             "settings": { "foreground": "#9558B2" }
         },
         {
-            "name": "Julia - type relation operators",
-            "scope": [ "keyword.operator.relation.types.julia" ],
-            "settings": { "foreground": "#666666" }
-        },
-        {
             "name": "Julia / R - assignment operators",
             "scope": [ "keyword.operator.assignment.r",
                 "keyword.operator.arrow.julia" ],
@@ -566,8 +564,8 @@
         },
         {
             "name": "C++ - storage type",
-            "scope": [ "source.cpp storage.type",
-                "source.c++ storage.type" ],
+            "scope": [ "source.cpp storage.type.template",
+                "source.c++ storage.type.template" ],
             "settings": { "foreground": "#6192cc" }
         },
         {
@@ -575,14 +573,6 @@
             "scope": [ "source.cpp storage.type.struct.cpp",
                 "source.c++ storage.type.struct.cpp" ],
             "settings": { "foreground": "#CB3C33" }
-        },
-        {
-            "name": "C++ - primitive types (double/int/etc.)",
-            "scope": [ "source.cpp storage.type.built-in.primitive.cpp",
-                "source.c++ storage.type.built-in.primitive.cpp",
-                "source.cpp storage.type.primitive.cpp",
-                "source.c++ storage.type.primitive.cpp" ],
-            "settings": { "foreground": "#389826" }
         },
         {
             "name": "C++ - qualified type names (std::optional)",
@@ -597,18 +587,8 @@
             "settings": { "foreground": "#389826" }
         },
         {
-            "name": "C++ - type names",
-            "scope": [ "source.cpp entity.name.type",
-                "source.c++ entity.name.type",
-                "source.cpp entity.name.type.cpp",
-                "source.c++ entity.name.type.cpp" ],
-            "settings": { "foreground": "#389826" }
-        },
-        {
             "name": "C++ - scope resolution (::)",
-            "scope": [ "source.cpp punctuation.separator.scope-resolution",
-                "source.c++ punctuation.separator.scope-resolution",
-                "source.cpp punctuation.accessor.scope-resolution",
+            "scope": [ "source.cpp punctuation.accessor.scope-resolution",
                 "source.c++ punctuation.accessor.scope-resolution" ],
             "settings": { "foreground": "#333333" }
         },
@@ -647,7 +627,9 @@
         },
         {
             "name": "R - Special constants (Inf/NaN/NA)",
-            "scope": [ "constant.language.r" ],
+            "scope": [ "constant.language.julia",
+                "constant.language.r",
+                "constant.language.python" ],
             "settings": { "foreground": "#389826" }
         },
         {
@@ -711,21 +693,9 @@
             "settings": { "foreground": "#333333" }
         },
         {
-            "name": "R - Support functions (tryCatch)",
-            "scope": [ "support.function.r" ],
-            "settings": { "foreground": "#4063D8" }
-        },
-        {
             "name": "R - Comparison operators",
             "scope": [ "keyword.operator.comparison.r" ],
             "settings": { "foreground": "#e77b00" }
-        },
-        {
-            "name": "Python - class/def/async keyword",
-            "scope": [ "storage.type.class.python",
-                "storage.type.function.python",
-                "storage.type.function.async.python" ],
-            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "Python - logical operators (not/and/or)",
@@ -745,36 +715,14 @@
         {
             "name": "Python - parameters",
             "scope": [ "variable.parameter.function-call.python",
-                "variable.parameter.function.language.python",
-                "meta.function-call.arguments.python" ],
+                "variable.parameter.function.language.python" ],
             "settings": { "foreground": "#333333" }
         },
         {
             "name": "Python - self parameters",
-            "scope": [ "meta.function.parameters.python variable.parameter.function.language.special.self.python",
-                "variable.language.special.self.python" ],
+            "scope": [ "meta.function.parameters variable.parameter.function.language.special.self",
+                "variable.language.special.self" ],
             "settings": { "foreground": "#9558B2" }
-        },
-        {
-            "name": "Python - class name",
-            "scope": [ "entity.name.type.class.python" ],
-            "settings": { "foreground": "#333333" }
-        },
-        {
-            "name": "Python - function names",
-            "scope": [ "support.function.magic.python",
-                "meta.function.python support.type.python" ],
-            "settings": { "foreground": "#9558B2" }
-        },
-        {
-            "name": "Python - types in calls (float(x))",
-            "scope": [ "meta.function-call.python support.type.python" ],
-            "settings": { "foreground": "#4063D8" }
-        },
-        {
-            "name": "Python - type annotations (x: float)",
-            "scope": [ "meta.function.parameters.python support.type.python" ],
-            "settings": { "foreground": "#389826" }
         },
         {
             "name": "Python - string prefix (r/f)",
@@ -816,24 +764,22 @@
             "name": "MATLAB - input/output parameters",
             "scope": [ "variable.parameter.output.matlab",
                 "variable.parameter.input.matlab",
-                "punctuation.accessor.dot.matlab" ],
+                "punctuation.accessor.dot.matlab",
+                "keyword.operator.storage.at.matlab",
+                "meta.function-call keyword.operator.vector.colon.matlab" ],
             "settings": { "foreground": "#333333" }
         },
         {
-            "name": "MATLAB - if declaration",
-            "scope": [ "meta.if.declaration.matlab" ],
-            "settings": { "foreground": "#333333" }
+            "name": "MATLAB - keywords",
+            "scope": [ "storage.type.function.matlab",
+                "storage.type.function.end.matlab" ],
+            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "MATLAB - operator relational",
-            "scope": [ "keyword.operator.relational.matlab" ],
+            "scope": [ "keyword.operator.relational.matlab",
+                "keyword.operator.logical.matlab" ],
             "settings": { "foreground": "#e77b00" }
-        },
-        {
-            "name": "MATLAB - logical operators",
-            "scope": [ "meta.while.declaration.matlab keyword.operator.logical.matlab",
-                "meta.if.declaration.matlab keyword.operator.logical.matlab" ],
-            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "JavaScript/TypeScript - arrow functions",
@@ -845,28 +791,25 @@
         },
         {
             "name": "JavaScript/TypeScript - function call",
-            "scope": [ "meta.function-call.tsx" ],
+            "scope": [ "meta.function-call.tsx",
+                "keyword.operator.new.js" ],
             "settings": { "foreground": "#4063D8" }
         },
         {
             "name": "JavaScript/TypeScript - function definition",
-            "scope": [ "meta.definition.function.tsx" ],
+            "scope": [ "meta.definition.function.js",
+                "meta.definition.function.tsx" ],
             "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "JavaScript/TypeScript - keywords",
             "scope": [ "source.js storage.type",
                 "meta.var.expr.js.jsx storage.type.js.jsx",
+                "keyword.operator.logical.js.jsx",
                 "source.ts storage.type",
                 "meta.var.expr.tsx storage.type.tsx",
                 "keyword.operator.logical.tsx" ],
             "settings": { "foreground": "#CB3C33" }
-        },
-        {
-            "name": "JavaScript/TypeScript - modifier",
-            "scope": [ "source.js storage.modifier",
-                "source.ts storage.modifier" ],
-            "settings": { "foreground": "#e77b00" }
         },
         {
             "name": "JavaScript/TypeScript - numeric",
