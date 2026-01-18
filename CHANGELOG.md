@@ -4,6 +4,19 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.0] - 2026-01-18
+
+### Added
+
+- C++ syntax highlighting support (types, modifiers, and keywords).
+- Constants (Inf/NaN/NA) highlighting across Julia/R/Python.
+- Python: highlight inherited classes in class definitions.
+
+### Changed
+
+- Synced dark/light rule sets and refreshed reference scope groups for consistency.
+- Expanded token scope coverage for function calls, types, and punctuation.
+
 ## [0.3.0] - 2026-01-07
 
 ### Added

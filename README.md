@@ -4,12 +4,13 @@ Warm-spectrum color themes (Dark + Light) with vibrant syntax highlighting.
 
 ## Supported Languages
 
-- JavaScript (including JSX)
+- C++
+- JavaScript (including JSX) (testing)
 - Julia
 - MATLAB
 - Python
 - R
-- TypeScript (including TSX)
+- TypeScript (including TSX) (testing)
 
 ## Screenshots
 

@@ -85,7 +85,8 @@
                 "punctuation.separator.comma",
                 "punctuation.separator.parameter",
                 "punctuation.separator.delimiter",
-                "punctuation.terminator.statement" ],
+                "punctuation.terminator.statement",
+                "punctuation.accessor" ],
             "settings": { "foreground": "#CCCCCC" }
         },
         {
@@ -141,7 +142,6 @@
                 "entity.name.struct",
                 "entity.name.interface",
                 "entity.other.inherited-class",
-                "support.class",
                 "support.other.namespace.use.php",
                 "meta.use.php",
                 "support.other.namespace.php",
@@ -423,12 +423,14 @@
         },
         {
             "name": "Ref - function-call arguments",
-            "scope": [ "meta.function-call.arguments" ],
+            "scope": [ "meta.function-call.arguments",
+                "source.python meta.function-call meta.function-call.arguments" ],
             "settings": { "foreground": "#CCCCCC" }
         },
         {
             "name": "Ref - function-call",
             "scope": [ "source.julia support.function",
+                "source.python meta.function-call",
                 "meta.function-call support.function",
                 "meta.function-call meta.function-call.generic",
                 "meta.function-call entity.name.function constant.numeric",
@@ -451,8 +453,10 @@
             "settings": { "foreground": "#e49f34" }
         },
         {
-            "name": "Ref - separator.annotation.result",
-            "scope": [ "punctuation.separator.annotation.result" ],
+            "name": "Assignment operators (<- / ->)",
+            "scope": [ "keyword.operator.assignment.r",
+                "keyword.operator.arrow.julia",
+                "punctuation.separator.annotation.result.python" ],
             "settings": { "foreground": "#e49f34" }
         },
         {
@@ -464,15 +468,12 @@
             "settings": { "foreground": "#a3a3a3" }
         },
         {
-            "name": "Ref - enum type",
-            "scope": [ "entity.name.type.enum" ],
-            "settings": { "foreground": "#CCCCCC" }
-        },
-        {
             "name": "Type",
             "scope": [ "support.type.julia",
+                "support.type.builtin.python",
                 "meta.function.parameters support.type",
-                "source.python support.type",
+                "source.python meta.function support.type",
+                "support.type.primitive",
                 "source.cpp storage.type storage.type.built-in" ],
             "settings": { "foreground": "#b8d5a2" }
         },
@@ -484,10 +485,19 @@
             "settings": { "foreground": "#e06c75" }
         },
         {
-            "name": "Class/Struct name",
+            "name": "Class/Struct/Enum name",
             "scope": [ "entity.name.type.class",
-                "meta.block.struct entity.name.type.struct" ],
+                "meta.block.struct entity.name.type.struct",
+                "entity.name.type.enum" ],
             "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "Constant (Inf/NaN/NA)",
+            "scope": [ "constant.language.julia",
+                "constant.language.r",
+                "constant.language.python",
+                "constant.language.boolean" ],
+            "settings": { "foreground": "#b8d5a2" }
         },
         {
             "name": "Modifier",
@@ -526,7 +536,8 @@
                 "keyword.storage.modifier.julia",
                 "keyword.other.concept.cpp",
                 "storage.modifier.specifier.const.cpp",
-                "storage.type.function.tsx" ],
+                "storage.type.function.tsx",
+                "meta.type.declaration storage.type.type" ],
             "settings": { "foreground": "#e06c75" }
         },
         {
@@ -535,7 +546,7 @@
             "settings": { "foreground": "#e0c841" }
         },
         {
-            "name": "Julia - macros / apply",
+            "name": "Julia - apply",
             "scope": [ "keyword.operator.applies.julia",
                 "entity.name.function.member" ],
             "settings": { "foreground": "#e0c841" }
@@ -562,12 +573,6 @@
                 "source.julia entity.name.function",
                 "keyword.operator.relation.julia",
                 "keyword.operator.ternary.julia" ],
-            "settings": { "foreground": "#e49f34" }
-        },
-        {
-            "name": "Julia / R - assignment operators",
-            "scope": [ "keyword.operator.assignment.r",
-                "keyword.operator.arrow.julia" ],
             "settings": { "foreground": "#e49f34" }
         },
         {
@@ -638,13 +643,6 @@
             "name": "R - Range operator (:)",
             "scope": [ "keyword.other.r" ],
             "settings": { "foreground": "#CCCCCC" }
-        },
-        {
-            "name": "R - Special constants (Inf/NaN/NA)",
-            "scope": [ "constant.language.julia",
-                "constant.language.r",
-                "constant.language.python" ],
-            "settings": { "foreground": "#b8d5a2" }
         },
         {
             "name": "R - Escape characters",
@@ -748,6 +746,11 @@
             "name": "Python - f-string format spec (:,.3f etc.)",
             "scope": [ "meta.fstring.python storage.type.format.python" ],
             "settings": { "foreground": "#e49f34" }
+        },
+        {
+            "name": "Python - entity.other.inherited-class",
+            "scope": [ "entity.other.inherited-class.python" ],
+            "settings": { "foreground": "#d2c985" }
         },
         {
             "name": "Python - exceptions",
