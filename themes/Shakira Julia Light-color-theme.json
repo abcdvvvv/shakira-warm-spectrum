@@ -29,7 +29,6 @@
         "struct": "#CB3C33",
         "number": "#e77b00",
         "operator": "#333334",
-        "function": "#e77b00",
         "method": "#4063D8",
         "macro": "#4063D8",
         "type": "#389826",
@@ -106,7 +105,6 @@
             "name": "Function, Special Method",
             "scope": [ "meta.function-call",
                 "variable.function",
-                "support.function",
                 "keyword.other.special-method" ],
             "settings": { "foreground": "#4063D8" }
         },
@@ -424,7 +422,6 @@
         {
             "name": "Ref - Functions",
             "scope": [ "meta.function-call",
-                "support.function",
                 "variable.function" ],
             "settings": { "foreground": "#4063D8" }
         },
@@ -520,10 +517,9 @@
             "settings": { "foreground": "#4063D8" }
         },
         {
-            "name": "Julia - macros / apply / TSX member calls",
+            "name": "Julia - macros / apply",
             "scope": [ "support.function.macro.julia",
                 "keyword.operator.applies.julia",
-                "entity.name.function.tsx",
                 "entity.name.function.member" ],
             "settings": { "foreground": "#4063D8" }
         },
@@ -545,8 +541,8 @@
         {
             "name": "Julia - globals / language vars / relations",
             "scope": [ "constant.global.julia",
-                "variable.language",
-                "entity.name.function",
+                "source.julia variable.language",
+                "source.julia entity.name.function",
                 "keyword.operator.relation.julia",
                 "keyword.operator.ternary.julia" ],
             "settings": { "foreground": "#9558B2" }
@@ -848,11 +844,22 @@
             "settings": { "foreground": "#e77b00" }
         },
         {
+            "name": "JavaScript/TypeScript - function call",
+            "scope": [ "meta.function-call.tsx" ],
+            "settings": { "foreground": "#4063D8" }
+        },
+        {
+            "name": "JavaScript/TypeScript - function definition",
+            "scope": [ "meta.definition.function.tsx" ],
+            "settings": { "foreground": "#e77b00" }
+        },
+        {
             "name": "JavaScript/TypeScript - keywords",
             "scope": [ "source.js storage.type",
                 "meta.var.expr.js.jsx storage.type.js.jsx",
                 "source.ts storage.type",
-                "meta.var.expr.tsx storage.type.tsx" ],
+                "meta.var.expr.tsx storage.type.tsx",
+                "keyword.operator.logical.tsx" ],
             "settings": { "foreground": "#CB3C33" }
         },
         {
@@ -864,7 +871,9 @@
         {
             "name": "JavaScript/TypeScript - numeric",
             "scope": [ "source.js storage.type.numeric",
-                "source.ts storage.type.numeric" ],
+                "source.ts storage.type.numeric",
+                "keyword.operator.ternary.tsx",
+                "keyword.operator.comparison.tsx" ],
             "settings": { "foreground": "#e77b00" }
         }
     ]
