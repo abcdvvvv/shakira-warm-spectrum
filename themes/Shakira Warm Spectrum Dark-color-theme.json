@@ -46,16 +46,9 @@
         "method": "#e0c841",
         "macro": "#e0c841",
         "type": "#b8d5a2",
-        "class": "#CCCCCC",
-        "property": "#9CDCFE"
+        "class": "#CCCCCC"
     },
     "tokenColors": [
-        {
-            "name": "Variables",
-            "scope": [ "variable",
-                "string constant.other.placeholder" ],
-            "settings": { "foreground": "#CCCCCC" }
-        },
         {
             "name": "Colors",
             "scope": [ "constant.other.color" ],
@@ -390,17 +383,20 @@
         {
             "name": "Comment",
             "scope": [ "comment",
-                "punctuation.definition.comment" ],
+                "punctuation.definition.comment",
+                "comment.line.number-sign.julia" ],
             "settings": { "fontStyle": "", "foreground": "#848BBD" }
         },
         {
-            "name": "Ref - Strings",
+            "name": "String",
             "scope": [ "string" ],
             "settings": { "foreground": "#d2c985" }
         },
         {
-            "name": "Ref - Numbers",
-            "scope": [ "constant.numeric.julia" ],
+            "name": "Number",
+            "scope": [ "constant.numeric.julia",
+                "source.js storage.type.numeric",
+                "source.ts storage.type.numeric" ],
             "settings": { "foreground": "#e49f34" }
         },
         {
@@ -416,29 +412,46 @@
             "settings": { "foreground": "#CCCCCC" }
         },
         {
-            "name": "Ref - function names",
+            "name": "Function definition",
             "scope": [ "meta.function support.function.magic",
-                "meta.function entity.name.function" ],
+                "meta.function entity.name.function",
+                "meta.definition.function.js",
+                "meta.definition.function.tsx",
+                "entity.name.function.definition.cpp",
+                "meta.function.definition.cpp entity.name.function.definition.cpp",
+                "meta.function.declaration.matlab entity.name.function.matlab" ],
             "settings": { "foreground": "#e49f34" }
         },
         {
-            "name": "Ref - function-call arguments",
-            "scope": [ "meta.function-call.arguments",
-                "source.python meta.function-call meta.function-call.arguments" ],
-            "settings": { "foreground": "#CCCCCC" }
-        },
-        {
-            "name": "Ref - function-call",
+            "name": "Function call",
             "scope": [ "source.julia support.function",
                 "source.python meta.function-call",
                 "meta.function-call support.function",
                 "meta.function-call meta.function-call.generic",
                 "meta.function-call entity.name.function constant.numeric",
-                "meta.function meta.function-call entity.name.function" ],
+                "meta.function meta.function-call entity.name.function",
+                "meta.function-call.tsx",
+                "keyword.operator.new.js",
+                "entity.name.function.call.cpp",
+                "meta.function-call.parens.matlab entity.name.function.matlab" ],
             "settings": { "foreground": "#e0c841" }
         },
         {
-            "name": "Ref - operator.assignment",
+            "name": "Function arguments",
+            "scope": [ "meta.function-call.arguments",
+                "variable.parameter.function-call.r",
+                "variable.parameter.function-call.python",
+                "source.python meta.function-call meta.function-call.arguments" ],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "Function parameters",
+            "scope": [ "variable.parameter.function.language.r",
+                "variable.parameter.function.language.python" ],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "Assignment operator",
             "scope": [ "keyword.operator.assignment",
                 "keyword.operator.update",
                 "keyword.operator.arithmetic",
@@ -447,25 +460,29 @@
             "settings": { "foreground": "#CCCCCC" }
         },
         {
-            "name": "Range operator",
-            "scope": [ "keyword.operator.range",
-                "meta.for keyword.operator.vector.colon.matlab" ],
-            "settings": { "foreground": "#e49f34" }
-        },
-        {
-            "name": "Assignment operators (<- / ->)",
+            "name": "Assignment operator 2 (<- / ->)",
             "scope": [ "keyword.operator.assignment.r",
                 "keyword.operator.arrow.julia",
                 "punctuation.separator.annotation.result.python" ],
             "settings": { "foreground": "#e49f34" }
         },
         {
-            "name": "Ref - type annotation",
-            "scope": [ "keyword.operator.relation.types.julia",
-                "punctuation.separator.annotation",
-                "keyword.operator.type.annotation",
-                "source.cpp punctuation.separator.scope-resolution" ],
-            "settings": { "foreground": "#a3a3a3" }
+            "name": "Range operator",
+            "scope": [ "keyword.operator.range",
+                "meta.for keyword.operator.vector.colon.matlab" ],
+            "settings": { "foreground": "#e49f34" }
+        },
+        {
+            "name": "Relational operator",
+            "scope": [ "keyword.operator.relational",
+                "keyword.operator.comparison",
+                "keyword.operator.ternary" ],
+            "settings": { "foreground": "#e49f34" }
+        },
+        {
+            "name": "Logical operator",
+            "scope": [ "keyword.operator.logical" ],
+            "settings": { "foreground": "#e06c75" }
         },
         {
             "name": "Type",
@@ -474,8 +491,17 @@
                 "meta.function.parameters support.type",
                 "source.python meta.function support.type",
                 "support.type.primitive",
-                "source.cpp storage.type storage.type.built-in" ],
+                "source.cpp storage.type storage.type.built-in",
+                "source.cpp meta.parameter.cpp entity.name.type.parameter.cpp" ],
             "settings": { "foreground": "#b8d5a2" }
+        },
+        {
+            "name": "Type annotation",
+            "scope": [ "keyword.operator.relation.types.julia",
+                "punctuation.separator.annotation",
+                "keyword.operator.type.annotation",
+                "source.cpp punctuation.separator.scope-resolution" ],
+            "settings": { "foreground": "#a3a3a3" }
         },
         {
             "name": "Class",
@@ -495,6 +521,7 @@
             "name": "Constant (Inf/NaN/NA)",
             "scope": [ "constant.language.julia",
                 "constant.language.r",
+                "support.constant.misc.r",
                 "constant.language.python",
                 "constant.language.boolean" ],
             "settings": { "foreground": "#b8d5a2" }
@@ -519,11 +546,6 @@
             "name": "Julia - docstring embedded code block",
             "scope": [ "docstring.julia.codeblock meta.embedded.block.julia" ],
             "settings": { "foreground": "#CCCCCC" }
-        },
-        {
-            "name": "Julia - comments",
-            "scope": [ "comment.line.number-sign.julia" ],
-            "settings": { "fontStyle": "", "foreground": "#848BBD" }
         },
         {
             "name": "Julia - keywords (and TSX function storage)",
@@ -600,12 +622,6 @@
             "settings": { "foreground": "#b8d5a2" }
         },
         {
-            "name": "C++ - parameter type names",
-            "scope": [ "source.cpp meta.parameter.cpp entity.name.type.parameter.cpp",
-                "source.c++ meta.parameter.cpp entity.name.type.parameter.cpp" ],
-            "settings": { "foreground": "#b8d5a2" }
-        },
-        {
             "name": "C++ - scope resolution (::)",
             "scope": [ "source.cpp punctuation.accessor.scope-resolution",
                 "source.c++ punctuation.accessor.scope-resolution" ],
@@ -620,29 +636,15 @@
             "settings": { "foreground": "#e49f34" }
         },
         {
-            "name": "C++ - function calls",
-            "scope": [ "source.cpp entity.name.function.call.cpp",
-                "source.c++ entity.name.function.call.cpp" ],
-            "settings": { "foreground": "#e0c841" }
-        },
-        {
-            "name": "C++ - function definitions",
-            "scope": [ "source.cpp entity.name.function.definition.cpp",
-                "source.c++ entity.name.function.definition.cpp",
-                "source.cpp meta.function.definition.cpp entity.name.function.definition.cpp",
-                "source.c++ meta.function.definition.cpp entity.name.function.definition.cpp" ],
-            "settings": { "foreground": "#e49f34" }
-        },
-        {
             "name": "R - function-call assignment (=)",
             "scope": [ "meta.function-call.r keyword.operator.assignment.r",
                 "meta.function.parameters.r keyword.operator.assignment.r" ],
             "settings": { "foreground": "#CCCCCC" }
         },
         {
-            "name": "R - Range operator (:)",
+            "name": "R - Other operators (:, ~)",
             "scope": [ "keyword.other.r" ],
-            "settings": { "foreground": "#CCCCCC" }
+            "settings": { "foreground": "#e49f34" }
         },
         {
             "name": "R - Escape characters",
@@ -660,24 +662,9 @@
             "settings": { "foreground": "#e0c841" }
         },
         {
-            "name": "R - Named arguments",
-            "scope": [ "variable.parameter.function-call.r" ],
-            "settings": { "foreground": "#CCCCCC" }
-        },
-        {
             "name": "R - Accessor ($)",
             "scope": [ "keyword.accessor.dollar.r" ],
             "settings": { "foreground": "#e49f34" }
-        },
-        {
-            "name": "R - Function parameters",
-            "scope": [ "variable.parameter.function.language.r" ],
-            "settings": { "foreground": "#CCCCCC" }
-        },
-        {
-            "name": "R - Constants (letters)",
-            "scope": [ "support.constant.misc.r" ],
-            "settings": { "foreground": "#b8d5a2" }
         },
         {
             "name": "R - Builtins (list)",
@@ -700,35 +687,9 @@
             "settings": { "foreground": "#e06c75" }
         },
         {
-            "name": "R - Call arguments (fallback)",
-            "scope": [ "meta.function-call.arguments.r" ],
-            "settings": { "foreground": "#CCCCCC" }
-        },
-        {
-            "name": "R - Comparison operators",
-            "scope": [ "keyword.operator.comparison.r" ],
-            "settings": { "foreground": "#e49f34" }
-        },
-        {
-            "name": "Python - logical operators (not/and/or)",
-            "scope": [ "keyword.operator.logical.python" ],
-            "settings": { "foreground": "#e06c75" }
-        },
-        {
-            "name": "Python - comparison operators",
-            "scope": [ "keyword.operator.comparison.python" ],
-            "settings": { "foreground": "#e49f34" }
-        },
-        {
             "name": "Python - decorator",
             "scope": [ "entity.name.function.decorator.python" ],
             "settings": { "foreground": "#e0c841" }
-        },
-        {
-            "name": "Python - parameters",
-            "scope": [ "variable.parameter.function-call.python",
-                "variable.parameter.function.language.python" ],
-            "settings": { "foreground": "#CCCCCC" }
         },
         {
             "name": "Python - self parameters",
@@ -768,16 +729,6 @@
             "settings": { "foreground": "#e49f34" }
         },
         {
-            "name": "MATLAB - function-call parens",
-            "scope": [ "meta.function-call.parens.matlab entity.name.function.matlab" ],
-            "settings": { "foreground": "#e0c841" }
-        },
-        {
-            "name": "MATLAB - function declaration",
-            "scope": [ "meta.function.declaration.matlab entity.name.function.matlab" ],
-            "settings": { "foreground": "#e49f34" }
-        },
-        {
             "name": "MATLAB - input/output parameters",
             "scope": [ "variable.parameter.output.matlab",
                 "variable.parameter.input.matlab",
@@ -793,29 +744,11 @@
             "settings": { "foreground": "#e06c75" }
         },
         {
-            "name": "MATLAB - operator relational",
-            "scope": [ "keyword.operator.relational.matlab",
-                "keyword.operator.logical.matlab" ],
-            "settings": { "foreground": "#e49f34" }
-        },
-        {
             "name": "JavaScript/TypeScript - arrow functions",
             "scope": [ "meta.arrow.js storage.type.function.arrow.js",
                 "meta.arrow.js.jsx storage.type.function.arrow.js.jsx",
                 "meta.arrow.ts storage.type.function.arrow.ts",
                 "meta.arrow.tsx storage.type.function.arrow.tsx" ],
-            "settings": { "foreground": "#e49f34" }
-        },
-        {
-            "name": "JavaScript/TypeScript - function call",
-            "scope": [ "meta.function-call.tsx",
-                "keyword.operator.new.js" ],
-            "settings": { "foreground": "#e0c841" }
-        },
-        {
-            "name": "JavaScript/TypeScript - function definition",
-            "scope": [ "meta.definition.function.js",
-                "meta.definition.function.tsx" ],
             "settings": { "foreground": "#e49f34" }
         },
         {
@@ -829,12 +762,9 @@
             "settings": { "foreground": "#e06c75" }
         },
         {
-            "name": "JavaScript/TypeScript - numeric",
-            "scope": [ "source.js storage.type.numeric",
-                "source.ts storage.type.numeric",
-                "keyword.operator.ternary.tsx",
-                "keyword.operator.comparison.tsx" ],
-            "settings": { "foreground": "#e49f34" }
+            "name": "Object-literal.key",
+            "scope": [ "meta.object-literal.key" ],
+            "settings": { "foreground": "#9CDCFE" }
         }
     ]
 }

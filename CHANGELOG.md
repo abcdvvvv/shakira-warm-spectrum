@@ -4,6 +4,15 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.1] - 2026-01-21
+
+### Changed
+
+- R: updated other operator color (`keyword.other.r`).
+- Consolidated function definition/call scopes to include MATLAB and C++ rules.
+- Unified function argument/parameter scopes for R/Python and folded C++ parameter types into the shared type rule.
+- Adopted a shared relational-operator rule, now covering JS/TS comparison/ternary operators.
+
 ## [0.4.0] - 2026-01-18
 
 ### Added
