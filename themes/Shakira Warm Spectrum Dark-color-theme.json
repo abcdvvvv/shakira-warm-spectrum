@@ -32,7 +32,10 @@
         "editorBracketHighlight.foreground2": "#e49f34",
         "editorBracketHighlight.foreground3": "#98C379",
         "editorBracketHighlight.foreground4": "#6192cc",
-        "editorBracketHighlight.foreground5": "#e06c75"
+        "editorBracketHighlight.foreground5": "#e06c75",
+        "gitDecoration.modifiedResourceForeground": "#e49f34",
+        "gitDecoration.untrackedResourceForeground": "#98C379",
+        "gitDecoration.deletedResourceForeground": "#e06c75"
     },
     "semanticHighlighting": true,
     "semanticTokenColors": {

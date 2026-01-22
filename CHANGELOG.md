@@ -4,6 +4,12 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.2] - 2026-01-22
+
+### Added
+
+- Git decorations for modified/untracked/deleted resources in both themes.
+
 ## [0.4.1] - 2026-01-21
 
 ### Changed
