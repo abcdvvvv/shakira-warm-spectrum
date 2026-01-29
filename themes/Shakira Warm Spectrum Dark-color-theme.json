@@ -113,8 +113,7 @@
         },
         {
             "name": "Other Variable, String Link",
-            "scope": [ "support.other.variable",
-                "string.other.link" ],
+            "scope": [ "support.other.variable" ],
             "settings": { "foreground": "#CCCCCC" }
         },
         {
@@ -301,9 +300,10 @@
         {
             "name": "Markdown - Heading",
             "scope": [ "markdown.heading",
-                "markup.heading | markup.heading entity.name",
-                "markup.heading.markdown punctuation.definition.heading.markdown" ],
-            "settings": { "foreground": "#e0c841" }
+                "markup.heading entity.name",
+                "markup.heading markup.bold",
+                "markup.heading punctuation.definition.heading.markdown" ],
+            "settings": { "fontStyle": "bold", "foreground": "#569CD6" }
         },
         {
             "name": "Markup - Italic",
@@ -312,9 +312,8 @@
         },
         {
             "name": "Markup - Bold",
-            "scope": [ "markup.bold",
-                "markup.bold string" ],
-            "settings": { "fontStyle": "bold", "foreground": "#e06c75" }
+            "scope": [ "markup.bold" ],
+            "settings": { "fontStyle": "bold" }
         },
         {
             "name": "Markup - Bold-Italic",
@@ -329,7 +328,7 @@
         {
             "name": "Markup - Underline",
             "scope": [ "markup.underline" ],
-            "settings": { "fontStyle": "underline", "foreground": "#e49f34" }
+            "settings": { "fontStyle": "underline", "foreground": "#d2c985" }
         },
         {
             "name": "Markdown - Blockquote",
@@ -343,8 +342,8 @@
         },
         {
             "name": "Markdown - Link",
-            "scope": [ "string.other.link.title.markdown" ],
-            "settings": { "foreground": "#e0c841" }
+            "scope": [ "text.html.markdown string.other.link" ],
+            "settings": { "foreground": "#e49f34" }
         },
         {
             "name": "Markdown - Link Description",
@@ -357,9 +356,25 @@
             "settings": { "foreground": "#e49f34" }
         },
         {
+            "name": "Markup - inline.raw.string",
+            "scope": [ "markup.inline.raw.string.markdown" ],
+            "settings": { "foreground": "#d2c985" }
+        },
+        {
             "name": "Markup - Raw Block",
             "scope": [ "markup.raw.block" ],
             "settings": { "foreground": "#d2c985" }
+        },
+        {
+            "name": "Markup - list.begin",
+            "scope": [ "punctuation.definition.list.begin.markdown" ],
+            "settings": { "foreground": "#e49f34" }
+        },
+        {
+            "name": "Markup - fenced_code.block",
+            "scope": [ "markup.fenced_code.block.markdown punctuation.definition",
+                "markup.fenced_code.block.markdown fenced_code.block.language" ],
+            "settings": { "foreground": "#a3a3a3" }
         },
         {
             "name": "Markdown - Fenced Bode Block",
@@ -415,6 +430,12 @@
             "settings": { "foreground": "#CCCCCC" }
         },
         {
+            "name": "Macro and decorator",
+            "scope": [ "support.function.macro.julia",
+                "entity.name.function.decorator.python" ],
+            "settings": { "foreground": "#e0c841" }
+        },
+        {
             "name": "Function definition",
             "scope": [ "meta.function support.function.magic",
                 "meta.function entity.name.function",
@@ -427,7 +448,7 @@
         },
         {
             "name": "Function call",
-            "scope": [ "source.julia support.function",
+            "scope": [ "support.function.julia",
                 "source.python meta.function-call",
                 "meta.function-call support.function",
                 "meta.function-call meta.function-call.generic",
@@ -688,11 +709,6 @@
             "name": "R - Word operators (in)",
             "scope": [ "keyword.operator.word.r" ],
             "settings": { "foreground": "#e06c75" }
-        },
-        {
-            "name": "Python - decorator",
-            "scope": [ "entity.name.function.decorator.python" ],
-            "settings": { "foreground": "#e0c841" }
         },
         {
             "name": "Python - self parameters",

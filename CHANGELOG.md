@@ -4,6 +4,13 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.3] - 2026-01-29
+
+### Changed
+
+- Markdown: refined heading scopes (bold + punctuation), link scope, and added inline raw/list/fenced-code tokens for clearer structure.
+- Syntax tokens: added macro/decorator rule, normalized Julia function-call scope, and removed Python decorator special-case; adjusted Python self-parameter color and misc scope cleanup.
+
 ## [0.4.2] - 2026-01-22
 
 ### Added
