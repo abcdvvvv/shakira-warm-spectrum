@@ -4,6 +4,15 @@ All notable changes to the "shakira-warm-spectrum" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.4] - 2026-01-30
+
+### Changed
+
+- narrowed punctuation scopes, consolidated variable/constant entries.
+- expanded Julia/C++/JS/TS function/operator rules.
+- kept the MATLAB colon/op assignment blocks aligned.
+- added MATLAB general variable highlighting (`variable.other.readwrite.matlab`).
+
 ## [0.4.3] - 2026-01-29
 
 ### Changed

@@ -63,8 +63,7 @@
         },
         {
             "name": "Punctuation (commas, terminators)",
-            "scope": [ "punctuation.separator",
-                "punctuation.separator.comma",
+            "scope": [ "punctuation.separator.comma",
                 "punctuation.separator.parameter",
                 "punctuation.separator.delimiter",
                 "punctuation.terminator.statement",
@@ -95,11 +94,6 @@
         {
             "name": "Block Level Variables",
             "scope": [ "meta.block variable.other" ],
-            "settings": { "foreground": "#333333" }
-        },
-        {
-            "name": "Other Variable, String Link",
-            "scope": [ "support.other.variable" ],
             "settings": { "foreground": "#333333" }
         },
         {
@@ -404,15 +398,17 @@
             "settings": { "foreground": "#e77b00" }
         },
         {
+            "name": "Variable",
+            "scope": [ "variable.other.readwrite.matlab",
+                "support.other.variable",
+                "variable.other.constant" ],
+            "settings": { "foreground": "#333333" }
+        },
+        {
             "name": "Ref - Namespaces",
             "scope": [ "entity.name.namespace",
                 "support.variable.property",
                 "support.variable.tsx" ],
-            "settings": { "foreground": "#333333" }
-        },
-        {
-            "name": "Ref - Other constants",
-            "scope": [ "variable.other.constant" ],
             "settings": { "foreground": "#333333" }
         },
         {
@@ -423,7 +419,8 @@
         },
         {
             "name": "Function definition",
-            "scope": [ "meta.function support.function.magic",
+            "scope": [ "entity.name.function.julia",
+                "meta.function support.function.magic",
                 "meta.function entity.name.function",
                 "meta.definition.function.js",
                 "meta.definition.function.tsx",
@@ -441,8 +438,9 @@
                 "meta.function-call entity.name.function constant.numeric",
                 "meta.function meta.function-call entity.name.function",
                 "meta.function-call.tsx",
-                "keyword.operator.new.js",
+                "new.expr keyword.operator.new",
                 "entity.name.function.call.cpp",
+                "entity.name.function.member.cpp",
                 "meta.function-call.parens.matlab entity.name.function.matlab" ],
             "settings": { "foreground": "#4063D8" }
         },
@@ -457,23 +455,42 @@
         {
             "name": "Function parameters",
             "scope": [ "variable.parameter.function.language.r",
-                "variable.parameter.function.language.python" ],
+                "variable.parameter.function.language.python",
+                "variable.parameter.output.matlab",
+                "variable.parameter.input.matlab" ],
             "settings": { "foreground": "#333333" }
         },
         {
-            "name": "Assignment operator",
+            "name": "Arithmetic",
+            "scope": [ "keyword.operator.arithmetic" ],
+            "settings": { "foreground": "#333333" }
+        },
+        {
+            "name": "Assignment operator (=)",
             "scope": [ "keyword.operator.assignment",
                 "keyword.operator.update",
-                "keyword.operator.arithmetic",
-                "keyword.operator.dots",
-                "meta.function.parameters keyword.operator" ],
+                "meta.function-call.r keyword.operator.assignment.r",
+                "meta.function.parameters.r keyword.operator.assignment.r",
+                "meta.function.parameters keyword.operator",
+                "keyword.operator.storage.at.matlab" ],
+            "settings": { "foreground": "#333333" }
+        },
+        {
+            "name": "Dot",
+            "scope": [ "keyword.operator.dots.julia",
+                "punctuation.separator",
+                "punctuation.accessor.dot.matlab" ],
             "settings": { "foreground": "#333333" }
         },
         {
             "name": "Assignment operator 2 (<- / ->)",
             "scope": [ "keyword.operator.assignment.r",
                 "keyword.operator.arrow.julia",
-                "punctuation.separator.annotation.result.python" ],
+                "punctuation.separator.annotation.result.python",
+                "meta.arrow storage.type.function.arrow.js",
+                "meta.arrow storage.type.function.arrow.js.jsx",
+                "meta.arrow storage.type.function.arrow.ts",
+                "meta.arrow storage.type.function.arrow.tsx" ],
             "settings": { "foreground": "#f17821" }
         },
         {
@@ -490,9 +507,17 @@
             "settings": { "foreground": "#e77b00" }
         },
         {
-            "name": "Logical operator",
-            "scope": [ "keyword.operator.logical" ],
-            "settings": { "foreground": "#CB3C33" }
+            "name": "Logical/Relation operator",
+            "scope": [ "keyword.operator.logical",
+                "keyword.operator.relation.in.julia",
+                "keyword.operator.boolean.julia",
+                "keyword.operator.bitwise.julia",
+                "keyword.operator.isa.julia",
+                "keyword.operator.word.r",
+                "keyword.operator.other.r",
+                "keyword.operator.logical.js.jsx",
+                "keyword.operator.logical.tsx" ],
+            "settings": { "foreground": "#e06c75" }
         },
         {
             "name": "Type",
@@ -541,9 +566,38 @@
             "scope": [ "source.matlab storage.modifier",
                 "source.js storage.modifier",
                 "source.ts storage.modifier",
+                "source.jsx storage.modifier",
+                "source.tsx storage.modifier",
                 "source.cpp storage.modifier",
                 "source.cpp storage.type.modifier" ],
             "settings": { "foreground": "#e77b00" }
+        },
+        {
+            "name": "Keyword - function",
+            "scope": [ "keyword.control",
+                "keyword.other.julia",
+                "keyword.storage.modifier.julia",
+                "keyword.other.concept.cpp",
+                "storage.modifier.specifier.const.cpp",
+                "source.cpp keyword.other.using",
+                "source.c++ keyword.other.using",
+                "source.cpp storage.type.struct.cpp",
+                "source.c++ storage.type.struct.cpp",
+                "storage.type.function.tsx",
+                "meta.type.declaration storage.type.type",
+                "storage.type.function.matlab",
+                "storage.type.function.end.matlab",
+                "source.js storage.type",
+                "source.ts storage.type",
+                "meta.var.expr.js.jsx storage.type.js.jsx",
+                "meta.var.expr.tsx storage.type.tsx" ],
+            "settings": { "foreground": "#e06c75" }
+        },
+        {
+            "name": "Pipe",
+            "scope": [ "keyword.operator.applies.julia",
+                "keyword.operator.pipe.r" ],
+            "settings": { "foreground": "#e0c841" }
         },
         {
             "name": "Julia - docstring",
@@ -558,29 +612,8 @@
             "settings": { "foreground": "#333333" }
         },
         {
-            "name": "Julia - keywords (and TSX function storage)",
-            "scope": [ "keyword.control",
-                "keyword.other.julia",
-                "keyword.operator.relation.in.julia",
-                "keyword.operator.boolean.julia",
-                "keyword.operator.bitwise.julia",
-                "keyword.operator.isa.julia",
-                "keyword.storage.modifier.julia",
-                "keyword.other.concept.cpp",
-                "storage.modifier.specifier.const.cpp",
-                "storage.type.function.tsx",
-                "meta.type.declaration storage.type.type" ],
-            "settings": { "foreground": "#CB3C33" }
-        },
-        {
             "name": "Julia - interpolation operator",
             "scope": [ "keyword.operator.interpolation.julia" ],
-            "settings": { "foreground": "#4063D8" }
-        },
-        {
-            "name": "Julia - apply",
-            "scope": [ "keyword.operator.applies.julia",
-                "entity.name.function.member" ],
             "settings": { "foreground": "#4063D8" }
         },
         {
@@ -602,28 +635,15 @@
             "name": "Julia - globals / language vars / relations",
             "scope": [ "constant.global.julia",
                 "source.julia variable.language",
-                "source.julia entity.name.function",
                 "keyword.operator.relation.julia",
                 "keyword.operator.ternary.julia" ],
             "settings": { "foreground": "#9558B2" }
-        },
-        {
-            "name": "C++ - using",
-            "scope": [ "source.cpp keyword.other.using",
-                "source.c++ keyword.other.using" ],
-            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "C++ - storage type",
             "scope": [ "source.cpp storage.type.template",
                 "source.c++ storage.type.template" ],
             "settings": { "foreground": "#6192cc" }
-        },
-        {
-            "name": "C++ - struct keyword",
-            "scope": [ "source.cpp storage.type.struct.cpp",
-                "source.c++ storage.type.struct.cpp" ],
-            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "C++ - qualified type names (std::optional)",
@@ -646,12 +666,6 @@
             "settings": { "foreground": "#e77b00" }
         },
         {
-            "name": "R - function-call assignment (=)",
-            "scope": [ "meta.function-call.r keyword.operator.assignment.r",
-                "meta.function.parameters.r keyword.operator.assignment.r" ],
-            "settings": { "foreground": "#333334" }
-        },
-        {
             "name": "R - Other operators (:, ~)",
             "scope": [ "keyword.other.r" ],
             "settings": { "foreground": "#e77b00" }
@@ -660,16 +674,6 @@
             "name": "R - Escape characters",
             "scope": [ "constant.character.escape.r" ],
             "settings": { "foreground": "#333333" }
-        },
-        {
-            "name": "R - Infix operators (%in%)",
-            "scope": [ "keyword.operator.other.r" ],
-            "settings": { "foreground": "#CB3C33" }
-        },
-        {
-            "name": "R - Pipe operator",
-            "scope": [ "keyword.operator.pipe.r" ],
-            "settings": { "foreground": "#4063D8" }
         },
         {
             "name": "R - Accessor ($)",
@@ -690,11 +694,6 @@
             "name": "R - Namespace qualifier (::)",
             "scope": [ "punctuation.accessor.colons.r" ],
             "settings": { "foreground": "#333333" }
-        },
-        {
-            "name": "R - Word operators (in)",
-            "scope": [ "keyword.operator.word.r" ],
-            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "Python - self parameters",
@@ -734,37 +733,9 @@
             "settings": { "foreground": "#e77b00" }
         },
         {
-            "name": "MATLAB - input/output parameters",
-            "scope": [ "variable.parameter.output.matlab",
-                "variable.parameter.input.matlab",
-                "punctuation.accessor.dot.matlab",
-                "keyword.operator.storage.at.matlab",
-                "meta.function-call keyword.operator.vector.colon.matlab" ],
+            "name": "MATLAB - operator.vector.colon ([:])",
+            "scope": [ "meta.function-call keyword.operator.vector.colon.matlab" ],
             "settings": { "foreground": "#333333" }
-        },
-        {
-            "name": "MATLAB - keywords",
-            "scope": [ "storage.type.function.matlab",
-                "storage.type.function.end.matlab" ],
-            "settings": { "foreground": "#CB3C33" }
-        },
-        {
-            "name": "JavaScript/TypeScript - arrow functions",
-            "scope": [ "meta.arrow.js storage.type.function.arrow.js",
-                "meta.arrow.js.jsx storage.type.function.arrow.js.jsx",
-                "meta.arrow.ts storage.type.function.arrow.ts",
-                "meta.arrow.tsx storage.type.function.arrow.tsx" ],
-            "settings": { "foreground": "#e77b00" }
-        },
-        {
-            "name": "JavaScript/TypeScript - keywords",
-            "scope": [ "source.js storage.type",
-                "meta.var.expr.js.jsx storage.type.js.jsx",
-                "keyword.operator.logical.js.jsx",
-                "source.ts storage.type",
-                "meta.var.expr.tsx storage.type.tsx",
-                "keyword.operator.logical.tsx" ],
-            "settings": { "foreground": "#CB3C33" }
         },
         {
             "name": "Object-literal.key",

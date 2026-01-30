@@ -4,7 +4,7 @@
     "publisher": "ShakiraChristian",
     "description": "Warm-spectrum light and dark themes with vibrant syntax highlighting for C++, JavaScript/TypeScript (including JSX/TSX), Julia, MATLAB, Python, and R.",
     "icon": "icon.png",
-    "version": "0.4.3",
+    "version": "0.4.4",
     "engines": { "vscode": "^1.60.0" },
     "categories": [ "Themes" ],
     "keywords": [ "C++", "Julia", "Python", "R", "MATLAB", "JavaScript", "TypeScript", "JSX", "TSX", "theme", "color theme", "syntax highlighting", "dark", "light" ],
